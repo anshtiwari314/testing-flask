@@ -4,7 +4,7 @@ app = Flask(__name__)
 
 @app.route("/", methods = ['POST'])
 def print_req():
-    print(f"0.0.0.0:{$PORT}")
+    print(f"0.0.0.0:{PORT}")
     user_as_json = request.get_json(silent=True, force=True)
     print(user_as_json)
     data = {'data': user_as_json}
