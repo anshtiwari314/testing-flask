@@ -5,6 +5,7 @@ import os
 load_dotenv()
 #print(f"0.0.0.0:{$PORT}")
 print(f"{os.getenv('PORT')}")
+saved_port = os.getenv('PORT')
 
 app = Flask(__name__)
 
@@ -16,6 +17,6 @@ def print_req():
     data = {'data': user_as_json}
     return jsonify(data, 200)
 
-
+#host='0.0.0.0'
 if __name__ == '__main__':
-    app.run(debug=True)
+    app.run(debug=True, port=saved_port)
