@@ -1,6 +1,6 @@
 from flask import Flask, request, jsonify
 
-print(f"0.0.0.0:{PORT}")
+print(f"0.0.0.0:{$PORT}")
 
 app = Flask(__name__)
 
