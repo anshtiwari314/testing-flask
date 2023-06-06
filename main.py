@@ -1,6 +1,10 @@
 from flask import Flask, request, jsonify
+from dotenv import load_dotenv
 
-print(f"0.0.0.0:{$PORT}")
+import os 
+load_dotenv()
+#print(f"0.0.0.0:{$PORT}")
+print(f"{os.getenv('PORT')}")
 
 app = Flask(__name__)
 
